@@ -30,6 +30,7 @@ purpose is outlined in each patches' front matter.
 * 0014-Fix-SNI-for-TlsV1_0OrLater-TlsV1_1OrLater-and-TlsV1_.patch
 * 0016-Fix-possible-crash-when-passing-an-invalid-PAC-URL.patch
 * 0011-Make-sure-to-report-correct-NetworkAccessibility.patch
+* 0020-Fix-build-with-clang-3-7.patch
 
 ### Part of Qt v5.5.2 (UNRELEASED!)
 * 0009-QNAM-Assign-proper-channel-before-sslErrors-emission.patch
@@ -52,4 +53,6 @@ purpose is outlined in each patches' front matter.
 This is only needed if you intent to harvest debugging symbols
 for breakpad.
 
+### Part of Qt 5.7 and later
+* 0015-Remove-legacy-platform-code-in-QSslSocket-for-OS-X-1.patch
 
