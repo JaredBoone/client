@@ -368,6 +368,7 @@ bool LsColJob::finished()
 namespace {
 const char statusphpC[] = "status.php";
 const char owncloudDirC[] = "owncloud/";
+const char shipdriveDirC[] = "drive/";
 }
 
 CheckServerJob::CheckServerJob(AccountPtr account, QObject *parent)
@@ -454,7 +455,8 @@ bool CheckServerJob::finished()
     // at the original location
     if ((reply()->error() == QNetworkReply::ContentNotFoundError) && (!_subdirFallback)) {
         _subdirFallback = true;
-        setPath(QLatin1String(owncloudDirC)+QLatin1String(statusphpC));
+        // setPath(QLatin1String(owncloudDirC)+QLatin1String(statusphpC));
+        setPath(QLatin1String(shipdriveDirC)+QLatin1String(statusphpC));
         start();
         qDebug() << "Retrying with" << reply()->url();
         return false;
